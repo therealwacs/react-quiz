@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faCheck, faSync } from '@fortawesome/free-solid-svg-icons'
 import classes from './FinishedQuiz.module.css'
 import Button from '../UI/Button/Button'
+import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 const FinishedQuiz = props => {
   const successCount = Object.keys(props.results).reduce((total, key) => {
@@ -13,6 +15,9 @@ const FinishedQuiz = props => {
     return total
   }, 0)
 
+  const defaultClickHandler = () => {
+    alert('It is an example: How to do Handler in a functionality component')
+  }
 
   return (
     <div className={classes.FinishedQuiz}>
@@ -41,12 +46,16 @@ const FinishedQuiz = props => {
           Повторить
           <FontAwesomeIcon icon={faSync} size={'xs'} />
         </Button>
-        <Button
-          type={'success'}
-        >
-          Перейти в список тестов
-        </Button>
 
+        <Link to={'/'}>
+          <Button type={'success'}>
+            Перейти в список тестов
+          </Button>
+        </Link>
+
+          <button onClick={defaultClickHandler}>
+            Default button
+          </button>
       </div>
     </div>
   )
