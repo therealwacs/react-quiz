@@ -5,7 +5,7 @@
     bottom: 0;
     width: 80%;
     max-width: 300px;
-    padding: 20px 10px;
+    padding: 0;
     box-sizing: border-box;
     background-color: #fff;
     z-index: 90;
@@ -25,22 +25,27 @@
 }
 
 .Drawer ul li {
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .Drawer ul li a {
+    display: block;
+    position: relative;
     color: #363f54;
     font-size: 30px;
     text-decoration: none;
     background-color: #fff;
+    font-size: 18px;
+    font-weight: 600;
     position: relative;
-    padding: 0 20px 10px 20px;
+    padding: 15px 10px;
     transition: opacity .3s ease-in;
 }
 
 .Drawer ul li a:hover {
-    opacity: .7;
+    background-color: whitesmoke;
 }
-.Drawer ul li a:active {
-    opacity: .7;
+
+.Drawer ul li a.active{
+    background-color: orange;
 }

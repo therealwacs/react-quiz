@@ -8,6 +8,7 @@
     font-weight: bold;
     font-size: 12px;
     border: none;
+    transition: opacity .25s ease;
 }
 .Button svg{
     margin-left: 5px;
@@ -39,4 +40,10 @@
 .primary {
     background-color: #2884f6;
     color: #fff;
+}
+
+.Button:hover {
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity .25s ease;
 }
